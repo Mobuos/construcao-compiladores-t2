@@ -109,7 +109,7 @@ programa
     ;
     
 declaracoes
-    : {decl_local_global}
+    : decl_local_global*
     ;
     
 decl_local_global
@@ -124,15 +124,15 @@ declaracao_local
     ;
     
 variavel
-    : identificador {',' identificador} ':' tipo
+    : identificador (',' identificador)* ':' tipo
     ;
     
 identificador
-    : IDENT {'.' IDENT} dimensao
+    : IDENT ('.' IDENT)* dimensao
     ;
     
 dimensao
-    : {'[' exp_aritmetica ']'}
+    : ('[' exp_aritmetica ']')*
     ;
     
 tipo
@@ -153,7 +153,7 @@ tipo_basico_ident
     ;
     
 tipo_estendido
-    : ['^'] tipo_basico_ident
+    : '^'? tipo_basico_ident
     ;
     
 valor_constante
@@ -165,24 +165,24 @@ valor_constante
     ;
     
 registro
-    : 'registro' {variavel} 'fim_registro'
+    : 'registro' variavel* 'fim_registro'
     ;
 
 parametro
-    : ['var'] identificador {',' identificador} ':' tipo_estendido
+    : 'var'? identificador (',' identificador)* ':' tipo_estendido
     ;
 
 parametros
-    : parametro {',' parametro}
+    : parametro (',' parametro)*
     ;
 
 declaracao_global
-    : 'procedimento' IDENT '(' [parametros] ')' {declaracao_local} {cmd} 'fim_procedimento' 
-    | 'funcao' IDENT '(' [parametros] ')' ':' tipo_estendido {declaracao_local} {cmd} 'fim_funcao'
+    : 'procedimento' IDENT '(' parametros? ')' declaracao_local* cmd* 'fim_procedimento' 
+    | 'funcao' IDENT '(' parametros? ')' ':' tipo_estendido declaracao_local* cmd* 'fim_funcao'
     ;
     
 corpo
-    : {declaracao_local} {cmd}
+    : declaracao_local* cmd*
     ;
     
 cmd
@@ -199,39 +199,39 @@ cmd
     ;
     
 cmdLeia
-    : 'leia' '(' ['^'] identificador {',' ['^'] identificador} ')'
+    : 'leia' '(' '^'? identificador (',' '^'? identificador)* ')'
     ;
     
 cmdEscreva
-    : 'escreva' '(' expressao {',' expressao} ')'
+    : 'escreva' '(' expressao (',' expressao)* ')'
     ;
     
 cmdSe
-    : 'se' expressao 'entao' {cmd} ['senao' {cmd}] 'fim_se'
+    : 'se' expressao 'entao' cmd* ('senao' cmd*)? 'fim_se'
     ;
     
 cmdCaso
-    : 'caso' exp_aritmetica 'seja' selecao ['senao' {cmd}] 'fim_caso'
+    : 'caso' exp_aritmetica 'seja' selecao ('senao' cmd*)? 'fim_caso'
     ;
     
 cmdPara
-    : 'para' IDENT '<-' exp_aritmetica 'ate' exp_aritmetica 'faca' {cmd} 'fim_para'
+    : 'para' IDENT '<-' exp_aritmetica 'ate' exp_aritmetica 'faca' cmd* 'fim_para'
     ;
     
 cmdEnquanto
-    : 'enquanto' expressao 'faca' {cmd} 'fim_enquanto'
+    : 'enquanto' expressao 'faca' cmd* 'fim_enquanto'
     ;
     
 cmdFaca
-    : 'faca' {cmd} 'ate' expressao
+    : 'faca' cmd* 'ate' expressao
     ;
     
 cmdAtribuicao
-    : ['^'] identificador '<-' expressao
+    : '^'? identificador '<-' expressao
     ;
     
 cmdChamada
-    : IDENT '(' expressao {',' expressao} ')'
+    : IDENT '(' expressao (',' expressao)* ')'
     ;
     
 cmdRetorne
@@ -239,19 +239,19 @@ cmdRetorne
     ;
     
 selecao
-    : {item_selecao}
+    : item_selecao*
     ;
     
 item_selecao
-    : constantes ':' {cmd}
+    : constantes ':' cmd*
     ;
     
 constantes
-    : numero_intervalo {',' numero_intervalo}
+    : numero_intervalo (',' numero_intervalo)*
     ;
     
 numero_intervalo
-    : [op_unario] NUM_INT ['..' [op_unario] NUM_INT]
+    : op_unario? NUM_INT ('..' op_unario? NUM_INT)?
     ;
     
 op_unario
@@ -259,15 +259,15 @@ op_unario
     ;
     
 exp_aritmetica
-    : termo {op1 termo}
+    : termo (op1 termo)*
     ;
     
 termo
-    : fator {op2 fator}
+    : fator (op2 fator)*
     ;
     
 fator
-    : parcela {op3 parcela}
+    : parcela (op3 parcela)*
     ;
     
 op1
@@ -283,12 +283,12 @@ op3
     ;
     
 parcela
-    : [op_unario] parcela_unario | parcela_nao_unario
+    : op_unario? parcela_unario | parcela_nao_unario
     ;
     
 parcela_unario
-    : ['^'] identificador
-	| IDENT '(' expressao {',' expressao} ')'
+    : '^'? identificador
+	| IDENT '(' expressao (',' expressao)* ')'
 	| NUM_INT
 	| NUM_REAL
 	| '(' expressao ')'
@@ -299,7 +299,7 @@ parcela_nao_unario
     ;
     
 exp_relacional
-    : exp_aritmetica [op_relacional exp_aritmetica]
+    : exp_aritmetica (op_relacional exp_aritmetica)?
     ;
     
 op_relacional
@@ -307,15 +307,15 @@ op_relacional
     ;
     
 expressao
-    : termo_logico {op_logico_1 termo_logico}
+    : termo_logico (op_logico_1 termo_logico)*
     ;
     
 termo_logico
-    : fator_logico {op_logico_2 fator_logico}
+    : fator_logico (op_logico_2 fator_logico)*
     ;
     
 fator_logico
-    : ['nao'] parcela_logica
+    : 'nao'? parcela_logica
     ;
     
 parcela_logica
