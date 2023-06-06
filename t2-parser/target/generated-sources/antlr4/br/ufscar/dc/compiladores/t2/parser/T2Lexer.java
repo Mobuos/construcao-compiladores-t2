@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class T2ParserLexer extends Lexer {
+public class T2Lexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.11.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -115,13 +115,13 @@ public class T2ParserLexer extends Lexer {
 	}
 
 
-	public T2ParserLexer(CharStream input) {
+	public T2Lexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "T2Parser.g4"; }
+	public String getGrammarFileName() { return "T2.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

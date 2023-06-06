@@ -1,4 +1,4 @@
-grammar T2Parser;
+grammar T2;
 
 // Máquina de estados que verifica o comentário corretamente, em que se inicia com o '{' aceita qualquer 
 // caracter dentro deste, sem ter quebra de linha e finaliza com '}'.
@@ -119,7 +119,7 @@ decl_local_global
     
 declaracao_local
     : 'declare' variavel 
-    | 'constante' IDENT ':' tipo_basico '=' valor_constate 
+    | 'constante' IDENT ':' tipo_basico '=' valor_constante 
     | 'tipo' IDENT ':' tipo
     ;
     

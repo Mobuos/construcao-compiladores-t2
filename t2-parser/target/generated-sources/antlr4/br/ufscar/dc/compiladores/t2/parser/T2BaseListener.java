@@ -6,612 +6,612 @@ import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link T2ParserListener},
+ * This class provides an empty implementation of {@link T2Listener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
 @SuppressWarnings("CheckReturnValue")
-public class T2ParserBaseListener implements T2ParserListener {
+public class T2BaseListener implements T2Listener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrograma(T2ParserParser.ProgramaContext ctx) { }
+	@Override public void enterPrograma(T2Parser.ProgramaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrograma(T2ParserParser.ProgramaContext ctx) { }
+	@Override public void exitPrograma(T2Parser.ProgramaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclaracoes(T2ParserParser.DeclaracoesContext ctx) { }
+	@Override public void enterDeclaracoes(T2Parser.DeclaracoesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclaracoes(T2ParserParser.DeclaracoesContext ctx) { }
+	@Override public void exitDeclaracoes(T2Parser.DeclaracoesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDecl_local_global(T2ParserParser.Decl_local_globalContext ctx) { }
+	@Override public void enterDecl_local_global(T2Parser.Decl_local_globalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDecl_local_global(T2ParserParser.Decl_local_globalContext ctx) { }
+	@Override public void exitDecl_local_global(T2Parser.Decl_local_globalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclaracao_local(T2ParserParser.Declaracao_localContext ctx) { }
+	@Override public void enterDeclaracao_local(T2Parser.Declaracao_localContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclaracao_local(T2ParserParser.Declaracao_localContext ctx) { }
+	@Override public void exitDeclaracao_local(T2Parser.Declaracao_localContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariavel(T2ParserParser.VariavelContext ctx) { }
+	@Override public void enterVariavel(T2Parser.VariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariavel(T2ParserParser.VariavelContext ctx) { }
+	@Override public void exitVariavel(T2Parser.VariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIdentificador(T2ParserParser.IdentificadorContext ctx) { }
+	@Override public void enterIdentificador(T2Parser.IdentificadorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIdentificador(T2ParserParser.IdentificadorContext ctx) { }
+	@Override public void exitIdentificador(T2Parser.IdentificadorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDimensao(T2ParserParser.DimensaoContext ctx) { }
+	@Override public void enterDimensao(T2Parser.DimensaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDimensao(T2ParserParser.DimensaoContext ctx) { }
+	@Override public void exitDimensao(T2Parser.DimensaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTipo(T2ParserParser.TipoContext ctx) { }
+	@Override public void enterTipo(T2Parser.TipoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTipo(T2ParserParser.TipoContext ctx) { }
+	@Override public void exitTipo(T2Parser.TipoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTipo_basico(T2ParserParser.Tipo_basicoContext ctx) { }
+	@Override public void enterTipo_basico(T2Parser.Tipo_basicoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTipo_basico(T2ParserParser.Tipo_basicoContext ctx) { }
+	@Override public void exitTipo_basico(T2Parser.Tipo_basicoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTipo_basico_ident(T2ParserParser.Tipo_basico_identContext ctx) { }
+	@Override public void enterTipo_basico_ident(T2Parser.Tipo_basico_identContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTipo_basico_ident(T2ParserParser.Tipo_basico_identContext ctx) { }
+	@Override public void exitTipo_basico_ident(T2Parser.Tipo_basico_identContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTipo_estendido(T2ParserParser.Tipo_estendidoContext ctx) { }
+	@Override public void enterTipo_estendido(T2Parser.Tipo_estendidoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTipo_estendido(T2ParserParser.Tipo_estendidoContext ctx) { }
+	@Override public void exitTipo_estendido(T2Parser.Tipo_estendidoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterValor_constante(T2ParserParser.Valor_constanteContext ctx) { }
+	@Override public void enterValor_constante(T2Parser.Valor_constanteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitValor_constante(T2ParserParser.Valor_constanteContext ctx) { }
+	@Override public void exitValor_constante(T2Parser.Valor_constanteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRegistro(T2ParserParser.RegistroContext ctx) { }
+	@Override public void enterRegistro(T2Parser.RegistroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRegistro(T2ParserParser.RegistroContext ctx) { }
+	@Override public void exitRegistro(T2Parser.RegistroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParametro(T2ParserParser.ParametroContext ctx) { }
+	@Override public void enterParametro(T2Parser.ParametroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParametro(T2ParserParser.ParametroContext ctx) { }
+	@Override public void exitParametro(T2Parser.ParametroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParametros(T2ParserParser.ParametrosContext ctx) { }
+	@Override public void enterParametros(T2Parser.ParametrosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParametros(T2ParserParser.ParametrosContext ctx) { }
+	@Override public void exitParametros(T2Parser.ParametrosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclaracao_global(T2ParserParser.Declaracao_globalContext ctx) { }
+	@Override public void enterDeclaracao_global(T2Parser.Declaracao_globalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclaracao_global(T2ParserParser.Declaracao_globalContext ctx) { }
+	@Override public void exitDeclaracao_global(T2Parser.Declaracao_globalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCorpo(T2ParserParser.CorpoContext ctx) { }
+	@Override public void enterCorpo(T2Parser.CorpoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCorpo(T2ParserParser.CorpoContext ctx) { }
+	@Override public void exitCorpo(T2Parser.CorpoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmd(T2ParserParser.CmdContext ctx) { }
+	@Override public void enterCmd(T2Parser.CmdContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmd(T2ParserParser.CmdContext ctx) { }
+	@Override public void exitCmd(T2Parser.CmdContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdLeia(T2ParserParser.CmdLeiaContext ctx) { }
+	@Override public void enterCmdLeia(T2Parser.CmdLeiaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdLeia(T2ParserParser.CmdLeiaContext ctx) { }
+	@Override public void exitCmdLeia(T2Parser.CmdLeiaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdEscreva(T2ParserParser.CmdEscrevaContext ctx) { }
+	@Override public void enterCmdEscreva(T2Parser.CmdEscrevaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdEscreva(T2ParserParser.CmdEscrevaContext ctx) { }
+	@Override public void exitCmdEscreva(T2Parser.CmdEscrevaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdSe(T2ParserParser.CmdSeContext ctx) { }
+	@Override public void enterCmdSe(T2Parser.CmdSeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdSe(T2ParserParser.CmdSeContext ctx) { }
+	@Override public void exitCmdSe(T2Parser.CmdSeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdCaso(T2ParserParser.CmdCasoContext ctx) { }
+	@Override public void enterCmdCaso(T2Parser.CmdCasoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdCaso(T2ParserParser.CmdCasoContext ctx) { }
+	@Override public void exitCmdCaso(T2Parser.CmdCasoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdPara(T2ParserParser.CmdParaContext ctx) { }
+	@Override public void enterCmdPara(T2Parser.CmdParaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdPara(T2ParserParser.CmdParaContext ctx) { }
+	@Override public void exitCmdPara(T2Parser.CmdParaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdEnquanto(T2ParserParser.CmdEnquantoContext ctx) { }
+	@Override public void enterCmdEnquanto(T2Parser.CmdEnquantoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdEnquanto(T2ParserParser.CmdEnquantoContext ctx) { }
+	@Override public void exitCmdEnquanto(T2Parser.CmdEnquantoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdFaca(T2ParserParser.CmdFacaContext ctx) { }
+	@Override public void enterCmdFaca(T2Parser.CmdFacaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdFaca(T2ParserParser.CmdFacaContext ctx) { }
+	@Override public void exitCmdFaca(T2Parser.CmdFacaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdAtribuicao(T2ParserParser.CmdAtribuicaoContext ctx) { }
+	@Override public void enterCmdAtribuicao(T2Parser.CmdAtribuicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdAtribuicao(T2ParserParser.CmdAtribuicaoContext ctx) { }
+	@Override public void exitCmdAtribuicao(T2Parser.CmdAtribuicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdChamada(T2ParserParser.CmdChamadaContext ctx) { }
+	@Override public void enterCmdChamada(T2Parser.CmdChamadaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdChamada(T2ParserParser.CmdChamadaContext ctx) { }
+	@Override public void exitCmdChamada(T2Parser.CmdChamadaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdRetorne(T2ParserParser.CmdRetorneContext ctx) { }
+	@Override public void enterCmdRetorne(T2Parser.CmdRetorneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdRetorne(T2ParserParser.CmdRetorneContext ctx) { }
+	@Override public void exitCmdRetorne(T2Parser.CmdRetorneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSelecao(T2ParserParser.SelecaoContext ctx) { }
+	@Override public void enterSelecao(T2Parser.SelecaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSelecao(T2ParserParser.SelecaoContext ctx) { }
+	@Override public void exitSelecao(T2Parser.SelecaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterItem_selecao(T2ParserParser.Item_selecaoContext ctx) { }
+	@Override public void enterItem_selecao(T2Parser.Item_selecaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitItem_selecao(T2ParserParser.Item_selecaoContext ctx) { }
+	@Override public void exitItem_selecao(T2Parser.Item_selecaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstantes(T2ParserParser.ConstantesContext ctx) { }
+	@Override public void enterConstantes(T2Parser.ConstantesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstantes(T2ParserParser.ConstantesContext ctx) { }
+	@Override public void exitConstantes(T2Parser.ConstantesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNumero_intervalo(T2ParserParser.Numero_intervaloContext ctx) { }
+	@Override public void enterNumero_intervalo(T2Parser.Numero_intervaloContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNumero_intervalo(T2ParserParser.Numero_intervaloContext ctx) { }
+	@Override public void exitNumero_intervalo(T2Parser.Numero_intervaloContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOp_unario(T2ParserParser.Op_unarioContext ctx) { }
+	@Override public void enterOp_unario(T2Parser.Op_unarioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOp_unario(T2ParserParser.Op_unarioContext ctx) { }
+	@Override public void exitOp_unario(T2Parser.Op_unarioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExp_aritmetica(T2ParserParser.Exp_aritmeticaContext ctx) { }
+	@Override public void enterExp_aritmetica(T2Parser.Exp_aritmeticaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExp_aritmetica(T2ParserParser.Exp_aritmeticaContext ctx) { }
+	@Override public void exitExp_aritmetica(T2Parser.Exp_aritmeticaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTermo(T2ParserParser.TermoContext ctx) { }
+	@Override public void enterTermo(T2Parser.TermoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTermo(T2ParserParser.TermoContext ctx) { }
+	@Override public void exitTermo(T2Parser.TermoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFator(T2ParserParser.FatorContext ctx) { }
+	@Override public void enterFator(T2Parser.FatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFator(T2ParserParser.FatorContext ctx) { }
+	@Override public void exitFator(T2Parser.FatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOp1(T2ParserParser.Op1Context ctx) { }
+	@Override public void enterOp1(T2Parser.Op1Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOp1(T2ParserParser.Op1Context ctx) { }
+	@Override public void exitOp1(T2Parser.Op1Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOp2(T2ParserParser.Op2Context ctx) { }
+	@Override public void enterOp2(T2Parser.Op2Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOp2(T2ParserParser.Op2Context ctx) { }
+	@Override public void exitOp2(T2Parser.Op2Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOp3(T2ParserParser.Op3Context ctx) { }
+	@Override public void enterOp3(T2Parser.Op3Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOp3(T2ParserParser.Op3Context ctx) { }
+	@Override public void exitOp3(T2Parser.Op3Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParcela(T2ParserParser.ParcelaContext ctx) { }
+	@Override public void enterParcela(T2Parser.ParcelaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParcela(T2ParserParser.ParcelaContext ctx) { }
+	@Override public void exitParcela(T2Parser.ParcelaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParcela_unario(T2ParserParser.Parcela_unarioContext ctx) { }
+	@Override public void enterParcela_unario(T2Parser.Parcela_unarioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParcela_unario(T2ParserParser.Parcela_unarioContext ctx) { }
+	@Override public void exitParcela_unario(T2Parser.Parcela_unarioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParcela_nao_unario(T2ParserParser.Parcela_nao_unarioContext ctx) { }
+	@Override public void enterParcela_nao_unario(T2Parser.Parcela_nao_unarioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParcela_nao_unario(T2ParserParser.Parcela_nao_unarioContext ctx) { }
+	@Override public void exitParcela_nao_unario(T2Parser.Parcela_nao_unarioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExp_relacional(T2ParserParser.Exp_relacionalContext ctx) { }
+	@Override public void enterExp_relacional(T2Parser.Exp_relacionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExp_relacional(T2ParserParser.Exp_relacionalContext ctx) { }
+	@Override public void exitExp_relacional(T2Parser.Exp_relacionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOp_relacional(T2ParserParser.Op_relacionalContext ctx) { }
+	@Override public void enterOp_relacional(T2Parser.Op_relacionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOp_relacional(T2ParserParser.Op_relacionalContext ctx) { }
+	@Override public void exitOp_relacional(T2Parser.Op_relacionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressao(T2ParserParser.ExpressaoContext ctx) { }
+	@Override public void enterExpressao(T2Parser.ExpressaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressao(T2ParserParser.ExpressaoContext ctx) { }
+	@Override public void exitExpressao(T2Parser.ExpressaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTermo_logico(T2ParserParser.Termo_logicoContext ctx) { }
+	@Override public void enterTermo_logico(T2Parser.Termo_logicoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTermo_logico(T2ParserParser.Termo_logicoContext ctx) { }
+	@Override public void exitTermo_logico(T2Parser.Termo_logicoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFator_logico(T2ParserParser.Fator_logicoContext ctx) { }
+	@Override public void enterFator_logico(T2Parser.Fator_logicoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFator_logico(T2ParserParser.Fator_logicoContext ctx) { }
+	@Override public void exitFator_logico(T2Parser.Fator_logicoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParcela_logica(T2ParserParser.Parcela_logicaContext ctx) { }
+	@Override public void enterParcela_logica(T2Parser.Parcela_logicaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParcela_logica(T2ParserParser.Parcela_logicaContext ctx) { }
+	@Override public void exitParcela_logica(T2Parser.Parcela_logicaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOp_logico_1(T2ParserParser.Op_logico_1Context ctx) { }
+	@Override public void enterOp_logico_1(T2Parser.Op_logico_1Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOp_logico_1(T2ParserParser.Op_logico_1Context ctx) { }
+	@Override public void exitOp_logico_1(T2Parser.Op_logico_1Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOp_logico_2(T2ParserParser.Op_logico_2Context ctx) { }
+	@Override public void enterOp_logico_2(T2Parser.Op_logico_2Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOp_logico_2(T2ParserParser.Op_logico_2Context ctx) { }
+	@Override public void exitOp_logico_2(T2Parser.Op_logico_2Context ctx) { }
 
 	/**
 	 * {@inheritDoc}

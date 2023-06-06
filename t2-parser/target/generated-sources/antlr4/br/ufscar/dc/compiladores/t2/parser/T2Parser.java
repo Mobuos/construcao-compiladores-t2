@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class T2ParserParser extends Parser {
+public class T2Parser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.11.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -133,7 +133,7 @@ public class T2ParserParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public T2ParserParser(TokenStream input) {
+	public T2Parser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -143,22 +143,22 @@ public class T2ParserParser extends Parser {
 		public DeclaracoesContext declaracoes() {
 			return getRuleContext(DeclaracoesContext.class,0);
 		}
-		public TerminalNode ALGORITMO() { return getToken(T2ParserParser.ALGORITMO, 0); }
+		public TerminalNode ALGORITMO() { return getToken(T2Parser.ALGORITMO, 0); }
 		public CorpoContext corpo() {
 			return getRuleContext(CorpoContext.class,0);
 		}
-		public TerminalNode FIM_ALGORITMO() { return getToken(T2ParserParser.FIM_ALGORITMO, 0); }
+		public TerminalNode FIM_ALGORITMO() { return getToken(T2Parser.FIM_ALGORITMO, 0); }
 		public ProgramaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_programa; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterPrograma(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterPrograma(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitPrograma(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitPrograma(this);
 		}
 	}
 
@@ -203,11 +203,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_declaracoes; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterDeclaracoes(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterDeclaracoes(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitDeclaracoes(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitDeclaracoes(this);
 		}
 	}
 
@@ -259,11 +259,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_decl_local_global; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterDecl_local_global(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterDecl_local_global(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitDecl_local_global(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitDecl_local_global(this);
 		}
 	}
 
@@ -308,21 +308,21 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Declaracao_localContext extends ParserRuleContext {
-		public TerminalNode DECLARE() { return getToken(T2ParserParser.DECLARE, 0); }
+		public TerminalNode DECLARE() { return getToken(T2Parser.DECLARE, 0); }
 		public VariavelContext variavel() {
 			return getRuleContext(VariavelContext.class,0);
 		}
-		public TerminalNode CONSTANTE() { return getToken(T2ParserParser.CONSTANTE, 0); }
-		public TerminalNode IDENT() { return getToken(T2ParserParser.IDENT, 0); }
-		public TerminalNode DELIM() { return getToken(T2ParserParser.DELIM, 0); }
+		public TerminalNode CONSTANTE() { return getToken(T2Parser.CONSTANTE, 0); }
+		public TerminalNode IDENT() { return getToken(T2Parser.IDENT, 0); }
+		public TerminalNode DELIM() { return getToken(T2Parser.DELIM, 0); }
 		public Tipo_basicoContext tipo_basico() {
 			return getRuleContext(Tipo_basicoContext.class,0);
 		}
-		public TerminalNode IGUAL() { return getToken(T2ParserParser.IGUAL, 0); }
+		public TerminalNode IGUAL() { return getToken(T2Parser.IGUAL, 0); }
 		public Valor_constanteContext valor_constante() {
 			return getRuleContext(Valor_constanteContext.class,0);
 		}
-		public TerminalNode TIPO() { return getToken(T2ParserParser.TIPO, 0); }
+		public TerminalNode TIPO() { return getToken(T2Parser.TIPO, 0); }
 		public TipoContext tipo() {
 			return getRuleContext(TipoContext.class,0);
 		}
@@ -332,11 +332,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_declaracao_local; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterDeclaracao_local(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterDeclaracao_local(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitDeclaracao_local(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitDeclaracao_local(this);
 		}
 	}
 
@@ -409,13 +409,13 @@ public class T2ParserParser extends Parser {
 		public IdentificadorContext identificador(int i) {
 			return getRuleContext(IdentificadorContext.class,i);
 		}
-		public TerminalNode DELIM() { return getToken(T2ParserParser.DELIM, 0); }
+		public TerminalNode DELIM() { return getToken(T2Parser.DELIM, 0); }
 		public TipoContext tipo() {
 			return getRuleContext(TipoContext.class,0);
 		}
-		public List<TerminalNode> VIRGULA() { return getTokens(T2ParserParser.VIRGULA); }
+		public List<TerminalNode> VIRGULA() { return getTokens(T2Parser.VIRGULA); }
 		public TerminalNode VIRGULA(int i) {
-			return getToken(T2ParserParser.VIRGULA, i);
+			return getToken(T2Parser.VIRGULA, i);
 		}
 		public VariavelContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -423,11 +423,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_variavel; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterVariavel(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterVariavel(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitVariavel(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitVariavel(this);
 		}
 	}
 
@@ -475,16 +475,16 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class IdentificadorContext extends ParserRuleContext {
-		public List<TerminalNode> IDENT() { return getTokens(T2ParserParser.IDENT); }
+		public List<TerminalNode> IDENT() { return getTokens(T2Parser.IDENT); }
 		public TerminalNode IDENT(int i) {
-			return getToken(T2ParserParser.IDENT, i);
+			return getToken(T2Parser.IDENT, i);
 		}
 		public DimensaoContext dimensao() {
 			return getRuleContext(DimensaoContext.class,0);
 		}
-		public List<TerminalNode> PONTO() { return getTokens(T2ParserParser.PONTO); }
+		public List<TerminalNode> PONTO() { return getTokens(T2Parser.PONTO); }
 		public TerminalNode PONTO(int i) {
-			return getToken(T2ParserParser.PONTO, i);
+			return getToken(T2Parser.PONTO, i);
 		}
 		public IdentificadorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -492,11 +492,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_identificador; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterIdentificador(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterIdentificador(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitIdentificador(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitIdentificador(this);
 		}
 	}
 
@@ -542,9 +542,9 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class DimensaoContext extends ParserRuleContext {
-		public List<TerminalNode> ABRECHAVE() { return getTokens(T2ParserParser.ABRECHAVE); }
+		public List<TerminalNode> ABRECHAVE() { return getTokens(T2Parser.ABRECHAVE); }
 		public TerminalNode ABRECHAVE(int i) {
-			return getToken(T2ParserParser.ABRECHAVE, i);
+			return getToken(T2Parser.ABRECHAVE, i);
 		}
 		public List<Exp_aritmeticaContext> exp_aritmetica() {
 			return getRuleContexts(Exp_aritmeticaContext.class);
@@ -552,9 +552,9 @@ public class T2ParserParser extends Parser {
 		public Exp_aritmeticaContext exp_aritmetica(int i) {
 			return getRuleContext(Exp_aritmeticaContext.class,i);
 		}
-		public List<TerminalNode> FECHACHAVE() { return getTokens(T2ParserParser.FECHACHAVE); }
+		public List<TerminalNode> FECHACHAVE() { return getTokens(T2Parser.FECHACHAVE); }
 		public TerminalNode FECHACHAVE(int i) {
-			return getToken(T2ParserParser.FECHACHAVE, i);
+			return getToken(T2Parser.FECHACHAVE, i);
 		}
 		public DimensaoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -562,11 +562,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dimensao; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterDimensao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterDimensao(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitDimensao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitDimensao(this);
 		}
 	}
 
@@ -622,11 +622,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_tipo; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterTipo(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterTipo(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitTipo(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitTipo(this);
 		}
 	}
 
@@ -673,21 +673,21 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Tipo_basicoContext extends ParserRuleContext {
-		public TerminalNode LITERAL() { return getToken(T2ParserParser.LITERAL, 0); }
-		public TerminalNode INTEIRO() { return getToken(T2ParserParser.INTEIRO, 0); }
-		public TerminalNode REAL() { return getToken(T2ParserParser.REAL, 0); }
-		public TerminalNode LOGICO() { return getToken(T2ParserParser.LOGICO, 0); }
+		public TerminalNode LITERAL() { return getToken(T2Parser.LITERAL, 0); }
+		public TerminalNode INTEIRO() { return getToken(T2Parser.INTEIRO, 0); }
+		public TerminalNode REAL() { return getToken(T2Parser.REAL, 0); }
+		public TerminalNode LOGICO() { return getToken(T2Parser.LOGICO, 0); }
 		public Tipo_basicoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_tipo_basico; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterTipo_basico(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterTipo_basico(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitTipo_basico(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitTipo_basico(this);
 		}
 	}
 
@@ -726,18 +726,18 @@ public class T2ParserParser extends Parser {
 		public Tipo_basicoContext tipo_basico() {
 			return getRuleContext(Tipo_basicoContext.class,0);
 		}
-		public TerminalNode IDENT() { return getToken(T2ParserParser.IDENT, 0); }
+		public TerminalNode IDENT() { return getToken(T2Parser.IDENT, 0); }
 		public Tipo_basico_identContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_tipo_basico_ident; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterTipo_basico_ident(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterTipo_basico_ident(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitTipo_basico_ident(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitTipo_basico_ident(this);
 		}
 	}
 
@@ -785,18 +785,18 @@ public class T2ParserParser extends Parser {
 		public Tipo_basico_identContext tipo_basico_ident() {
 			return getRuleContext(Tipo_basico_identContext.class,0);
 		}
-		public TerminalNode PONTEIRO() { return getToken(T2ParserParser.PONTEIRO, 0); }
+		public TerminalNode PONTEIRO() { return getToken(T2Parser.PONTEIRO, 0); }
 		public Tipo_estendidoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_tipo_estendido; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterTipo_estendido(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterTipo_estendido(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitTipo_estendido(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitTipo_estendido(this);
 		}
 	}
 
@@ -834,22 +834,22 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Valor_constanteContext extends ParserRuleContext {
-		public TerminalNode CADEIA() { return getToken(T2ParserParser.CADEIA, 0); }
-		public TerminalNode NUM_INT() { return getToken(T2ParserParser.NUM_INT, 0); }
-		public TerminalNode NUM_REAL() { return getToken(T2ParserParser.NUM_REAL, 0); }
-		public TerminalNode TRUE() { return getToken(T2ParserParser.TRUE, 0); }
-		public TerminalNode FALSE() { return getToken(T2ParserParser.FALSE, 0); }
+		public TerminalNode CADEIA() { return getToken(T2Parser.CADEIA, 0); }
+		public TerminalNode NUM_INT() { return getToken(T2Parser.NUM_INT, 0); }
+		public TerminalNode NUM_REAL() { return getToken(T2Parser.NUM_REAL, 0); }
+		public TerminalNode TRUE() { return getToken(T2Parser.TRUE, 0); }
+		public TerminalNode FALSE() { return getToken(T2Parser.FALSE, 0); }
 		public Valor_constanteContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_valor_constante; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterValor_constante(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterValor_constante(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitValor_constante(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitValor_constante(this);
 		}
 	}
 
@@ -885,8 +885,8 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class RegistroContext extends ParserRuleContext {
-		public TerminalNode REGISTRO() { return getToken(T2ParserParser.REGISTRO, 0); }
-		public TerminalNode FIM_REGISTRO() { return getToken(T2ParserParser.FIM_REGISTRO, 0); }
+		public TerminalNode REGISTRO() { return getToken(T2Parser.REGISTRO, 0); }
+		public TerminalNode FIM_REGISTRO() { return getToken(T2Parser.FIM_REGISTRO, 0); }
 		public List<VariavelContext> variavel() {
 			return getRuleContexts(VariavelContext.class);
 		}
@@ -899,11 +899,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_registro; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterRegistro(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterRegistro(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitRegistro(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitRegistro(this);
 		}
 	}
 
@@ -953,14 +953,14 @@ public class T2ParserParser extends Parser {
 		public IdentificadorContext identificador(int i) {
 			return getRuleContext(IdentificadorContext.class,i);
 		}
-		public TerminalNode DELIM() { return getToken(T2ParserParser.DELIM, 0); }
+		public TerminalNode DELIM() { return getToken(T2Parser.DELIM, 0); }
 		public Tipo_estendidoContext tipo_estendido() {
 			return getRuleContext(Tipo_estendidoContext.class,0);
 		}
-		public TerminalNode VAR() { return getToken(T2ParserParser.VAR, 0); }
-		public List<TerminalNode> VIRGULA() { return getTokens(T2ParserParser.VIRGULA); }
+		public TerminalNode VAR() { return getToken(T2Parser.VAR, 0); }
+		public List<TerminalNode> VIRGULA() { return getTokens(T2Parser.VIRGULA); }
 		public TerminalNode VIRGULA(int i) {
-			return getToken(T2ParserParser.VIRGULA, i);
+			return getToken(T2Parser.VIRGULA, i);
 		}
 		public ParametroContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -968,11 +968,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parametro; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterParametro(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterParametro(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitParametro(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitParametro(this);
 		}
 	}
 
@@ -1036,9 +1036,9 @@ public class T2ParserParser extends Parser {
 		public ParametroContext parametro(int i) {
 			return getRuleContext(ParametroContext.class,i);
 		}
-		public List<TerminalNode> VIRGULA() { return getTokens(T2ParserParser.VIRGULA); }
+		public List<TerminalNode> VIRGULA() { return getTokens(T2Parser.VIRGULA); }
 		public TerminalNode VIRGULA(int i) {
-			return getToken(T2ParserParser.VIRGULA, i);
+			return getToken(T2Parser.VIRGULA, i);
 		}
 		public ParametrosContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1046,11 +1046,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parametros; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterParametros(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterParametros(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitParametros(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitParametros(this);
 		}
 	}
 
@@ -1094,11 +1094,11 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Declaracao_globalContext extends ParserRuleContext {
-		public TerminalNode PROCEDIMENTO() { return getToken(T2ParserParser.PROCEDIMENTO, 0); }
-		public TerminalNode IDENT() { return getToken(T2ParserParser.IDENT, 0); }
-		public TerminalNode ABREPAR() { return getToken(T2ParserParser.ABREPAR, 0); }
-		public TerminalNode FECHAPAR() { return getToken(T2ParserParser.FECHAPAR, 0); }
-		public TerminalNode FIM_PROCEDIMENTO() { return getToken(T2ParserParser.FIM_PROCEDIMENTO, 0); }
+		public TerminalNode PROCEDIMENTO() { return getToken(T2Parser.PROCEDIMENTO, 0); }
+		public TerminalNode IDENT() { return getToken(T2Parser.IDENT, 0); }
+		public TerminalNode ABREPAR() { return getToken(T2Parser.ABREPAR, 0); }
+		public TerminalNode FECHAPAR() { return getToken(T2Parser.FECHAPAR, 0); }
+		public TerminalNode FIM_PROCEDIMENTO() { return getToken(T2Parser.FIM_PROCEDIMENTO, 0); }
 		public ParametrosContext parametros() {
 			return getRuleContext(ParametrosContext.class,0);
 		}
@@ -1114,23 +1114,23 @@ public class T2ParserParser extends Parser {
 		public CmdContext cmd(int i) {
 			return getRuleContext(CmdContext.class,i);
 		}
-		public TerminalNode FUNCAO() { return getToken(T2ParserParser.FUNCAO, 0); }
-		public TerminalNode DELIM() { return getToken(T2ParserParser.DELIM, 0); }
+		public TerminalNode FUNCAO() { return getToken(T2Parser.FUNCAO, 0); }
+		public TerminalNode DELIM() { return getToken(T2Parser.DELIM, 0); }
 		public Tipo_estendidoContext tipo_estendido() {
 			return getRuleContext(Tipo_estendidoContext.class,0);
 		}
-		public TerminalNode FIM_FUNCAO() { return getToken(T2ParserParser.FIM_FUNCAO, 0); }
+		public TerminalNode FIM_FUNCAO() { return getToken(T2Parser.FIM_FUNCAO, 0); }
 		public Declaracao_globalContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_declaracao_global; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterDeclaracao_global(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterDeclaracao_global(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitDeclaracao_global(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitDeclaracao_global(this);
 		}
 	}
 
@@ -1287,11 +1287,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_corpo; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCorpo(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCorpo(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCorpo(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCorpo(this);
 		}
 	}
 
@@ -1381,11 +1381,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmd; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmd(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmd(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmd(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmd(this);
 		}
 	}
 
@@ -1481,22 +1481,22 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdLeiaContext extends ParserRuleContext {
-		public TerminalNode LEIA() { return getToken(T2ParserParser.LEIA, 0); }
-		public TerminalNode ABREPAR() { return getToken(T2ParserParser.ABREPAR, 0); }
+		public TerminalNode LEIA() { return getToken(T2Parser.LEIA, 0); }
+		public TerminalNode ABREPAR() { return getToken(T2Parser.ABREPAR, 0); }
 		public List<IdentificadorContext> identificador() {
 			return getRuleContexts(IdentificadorContext.class);
 		}
 		public IdentificadorContext identificador(int i) {
 			return getRuleContext(IdentificadorContext.class,i);
 		}
-		public TerminalNode FECHAPAR() { return getToken(T2ParserParser.FECHAPAR, 0); }
-		public List<TerminalNode> PONTEIRO() { return getTokens(T2ParserParser.PONTEIRO); }
+		public TerminalNode FECHAPAR() { return getToken(T2Parser.FECHAPAR, 0); }
+		public List<TerminalNode> PONTEIRO() { return getTokens(T2Parser.PONTEIRO); }
 		public TerminalNode PONTEIRO(int i) {
-			return getToken(T2ParserParser.PONTEIRO, i);
+			return getToken(T2Parser.PONTEIRO, i);
 		}
-		public List<TerminalNode> VIRGULA() { return getTokens(T2ParserParser.VIRGULA); }
+		public List<TerminalNode> VIRGULA() { return getTokens(T2Parser.VIRGULA); }
 		public TerminalNode VIRGULA(int i) {
-			return getToken(T2ParserParser.VIRGULA, i);
+			return getToken(T2Parser.VIRGULA, i);
 		}
 		public CmdLeiaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1504,11 +1504,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmdLeia; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdLeia(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdLeia(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdLeia(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdLeia(this);
 		}
 	}
 
@@ -1578,18 +1578,18 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdEscrevaContext extends ParserRuleContext {
-		public TerminalNode ESCREVA() { return getToken(T2ParserParser.ESCREVA, 0); }
-		public TerminalNode ABREPAR() { return getToken(T2ParserParser.ABREPAR, 0); }
+		public TerminalNode ESCREVA() { return getToken(T2Parser.ESCREVA, 0); }
+		public TerminalNode ABREPAR() { return getToken(T2Parser.ABREPAR, 0); }
 		public List<ExpressaoContext> expressao() {
 			return getRuleContexts(ExpressaoContext.class);
 		}
 		public ExpressaoContext expressao(int i) {
 			return getRuleContext(ExpressaoContext.class,i);
 		}
-		public TerminalNode FECHAPAR() { return getToken(T2ParserParser.FECHAPAR, 0); }
-		public List<TerminalNode> VIRGULA() { return getTokens(T2ParserParser.VIRGULA); }
+		public TerminalNode FECHAPAR() { return getToken(T2Parser.FECHAPAR, 0); }
+		public List<TerminalNode> VIRGULA() { return getTokens(T2Parser.VIRGULA); }
 		public TerminalNode VIRGULA(int i) {
-			return getToken(T2ParserParser.VIRGULA, i);
+			return getToken(T2Parser.VIRGULA, i);
 		}
 		public CmdEscrevaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1597,11 +1597,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmdEscreva; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdEscreva(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdEscreva(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdEscreva(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdEscreva(this);
 		}
 	}
 
@@ -1651,30 +1651,30 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdSeContext extends ParserRuleContext {
-		public TerminalNode IF() { return getToken(T2ParserParser.IF, 0); }
+		public TerminalNode IF() { return getToken(T2Parser.IF, 0); }
 		public ExpressaoContext expressao() {
 			return getRuleContext(ExpressaoContext.class,0);
 		}
-		public TerminalNode THEN() { return getToken(T2ParserParser.THEN, 0); }
-		public TerminalNode ENDIF() { return getToken(T2ParserParser.ENDIF, 0); }
+		public TerminalNode THEN() { return getToken(T2Parser.THEN, 0); }
+		public TerminalNode ENDIF() { return getToken(T2Parser.ENDIF, 0); }
 		public List<CmdContext> cmd() {
 			return getRuleContexts(CmdContext.class);
 		}
 		public CmdContext cmd(int i) {
 			return getRuleContext(CmdContext.class,i);
 		}
-		public TerminalNode ELSE() { return getToken(T2ParserParser.ELSE, 0); }
+		public TerminalNode ELSE() { return getToken(T2Parser.ELSE, 0); }
 		public CmdSeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdSe; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdSe(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdSe(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdSe(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdSe(this);
 		}
 	}
 
@@ -1746,16 +1746,16 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdCasoContext extends ParserRuleContext {
-		public TerminalNode CASO() { return getToken(T2ParserParser.CASO, 0); }
+		public TerminalNode CASO() { return getToken(T2Parser.CASO, 0); }
 		public Exp_aritmeticaContext exp_aritmetica() {
 			return getRuleContext(Exp_aritmeticaContext.class,0);
 		}
-		public TerminalNode SEJA() { return getToken(T2ParserParser.SEJA, 0); }
+		public TerminalNode SEJA() { return getToken(T2Parser.SEJA, 0); }
 		public SelecaoContext selecao() {
 			return getRuleContext(SelecaoContext.class,0);
 		}
-		public TerminalNode FIM_CASO() { return getToken(T2ParserParser.FIM_CASO, 0); }
-		public TerminalNode ELSE() { return getToken(T2ParserParser.ELSE, 0); }
+		public TerminalNode FIM_CASO() { return getToken(T2Parser.FIM_CASO, 0); }
+		public TerminalNode ELSE() { return getToken(T2Parser.ELSE, 0); }
 		public List<CmdContext> cmd() {
 			return getRuleContexts(CmdContext.class);
 		}
@@ -1768,11 +1768,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmdCaso; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdCaso(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdCaso(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdCaso(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdCaso(this);
 		}
 	}
 
@@ -1832,18 +1832,18 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdParaContext extends ParserRuleContext {
-		public TerminalNode PARA() { return getToken(T2ParserParser.PARA, 0); }
-		public TerminalNode IDENT() { return getToken(T2ParserParser.IDENT, 0); }
-		public TerminalNode ATRIBUICAO() { return getToken(T2ParserParser.ATRIBUICAO, 0); }
+		public TerminalNode PARA() { return getToken(T2Parser.PARA, 0); }
+		public TerminalNode IDENT() { return getToken(T2Parser.IDENT, 0); }
+		public TerminalNode ATRIBUICAO() { return getToken(T2Parser.ATRIBUICAO, 0); }
 		public List<Exp_aritmeticaContext> exp_aritmetica() {
 			return getRuleContexts(Exp_aritmeticaContext.class);
 		}
 		public Exp_aritmeticaContext exp_aritmetica(int i) {
 			return getRuleContext(Exp_aritmeticaContext.class,i);
 		}
-		public TerminalNode ATE() { return getToken(T2ParserParser.ATE, 0); }
-		public TerminalNode FACA() { return getToken(T2ParserParser.FACA, 0); }
-		public TerminalNode FIM_PARA() { return getToken(T2ParserParser.FIM_PARA, 0); }
+		public TerminalNode ATE() { return getToken(T2Parser.ATE, 0); }
+		public TerminalNode FACA() { return getToken(T2Parser.FACA, 0); }
+		public TerminalNode FIM_PARA() { return getToken(T2Parser.FIM_PARA, 0); }
 		public List<CmdContext> cmd() {
 			return getRuleContexts(CmdContext.class);
 		}
@@ -1856,11 +1856,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmdPara; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdPara(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdPara(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdPara(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdPara(this);
 		}
 	}
 
@@ -1916,12 +1916,12 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdEnquantoContext extends ParserRuleContext {
-		public TerminalNode WHILE() { return getToken(T2ParserParser.WHILE, 0); }
+		public TerminalNode WHILE() { return getToken(T2Parser.WHILE, 0); }
 		public ExpressaoContext expressao() {
 			return getRuleContext(ExpressaoContext.class,0);
 		}
-		public TerminalNode FACA() { return getToken(T2ParserParser.FACA, 0); }
-		public TerminalNode ENDWHILE() { return getToken(T2ParserParser.ENDWHILE, 0); }
+		public TerminalNode FACA() { return getToken(T2Parser.FACA, 0); }
+		public TerminalNode ENDWHILE() { return getToken(T2Parser.ENDWHILE, 0); }
 		public List<CmdContext> cmd() {
 			return getRuleContexts(CmdContext.class);
 		}
@@ -1934,11 +1934,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmdEnquanto; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdEnquanto(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdEnquanto(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdEnquanto(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdEnquanto(this);
 		}
 	}
 
@@ -1986,8 +1986,8 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdFacaContext extends ParserRuleContext {
-		public TerminalNode FACA() { return getToken(T2ParserParser.FACA, 0); }
-		public TerminalNode ATE() { return getToken(T2ParserParser.ATE, 0); }
+		public TerminalNode FACA() { return getToken(T2Parser.FACA, 0); }
+		public TerminalNode ATE() { return getToken(T2Parser.ATE, 0); }
 		public ExpressaoContext expressao() {
 			return getRuleContext(ExpressaoContext.class,0);
 		}
@@ -2003,11 +2003,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmdFaca; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdFaca(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdFaca(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdFaca(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdFaca(this);
 		}
 	}
 
@@ -2056,22 +2056,22 @@ public class T2ParserParser extends Parser {
 		public IdentificadorContext identificador() {
 			return getRuleContext(IdentificadorContext.class,0);
 		}
-		public TerminalNode ATRIBUICAO() { return getToken(T2ParserParser.ATRIBUICAO, 0); }
+		public TerminalNode ATRIBUICAO() { return getToken(T2Parser.ATRIBUICAO, 0); }
 		public ExpressaoContext expressao() {
 			return getRuleContext(ExpressaoContext.class,0);
 		}
-		public TerminalNode PONTEIRO() { return getToken(T2ParserParser.PONTEIRO, 0); }
+		public TerminalNode PONTEIRO() { return getToken(T2Parser.PONTEIRO, 0); }
 		public CmdAtribuicaoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdAtribuicao; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdAtribuicao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdAtribuicao(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdAtribuicao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdAtribuicao(this);
 		}
 	}
 
@@ -2113,18 +2113,18 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdChamadaContext extends ParserRuleContext {
-		public TerminalNode IDENT() { return getToken(T2ParserParser.IDENT, 0); }
-		public TerminalNode ABREPAR() { return getToken(T2ParserParser.ABREPAR, 0); }
+		public TerminalNode IDENT() { return getToken(T2Parser.IDENT, 0); }
+		public TerminalNode ABREPAR() { return getToken(T2Parser.ABREPAR, 0); }
 		public List<ExpressaoContext> expressao() {
 			return getRuleContexts(ExpressaoContext.class);
 		}
 		public ExpressaoContext expressao(int i) {
 			return getRuleContext(ExpressaoContext.class,i);
 		}
-		public TerminalNode FECHAPAR() { return getToken(T2ParserParser.FECHAPAR, 0); }
-		public List<TerminalNode> VIRGULA() { return getTokens(T2ParserParser.VIRGULA); }
+		public TerminalNode FECHAPAR() { return getToken(T2Parser.FECHAPAR, 0); }
+		public List<TerminalNode> VIRGULA() { return getTokens(T2Parser.VIRGULA); }
 		public TerminalNode VIRGULA(int i) {
-			return getToken(T2ParserParser.VIRGULA, i);
+			return getToken(T2Parser.VIRGULA, i);
 		}
 		public CmdChamadaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2132,11 +2132,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmdChamada; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdChamada(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdChamada(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdChamada(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdChamada(this);
 		}
 	}
 
@@ -2186,7 +2186,7 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CmdRetorneContext extends ParserRuleContext {
-		public TerminalNode RETORNE() { return getToken(T2ParserParser.RETORNE, 0); }
+		public TerminalNode RETORNE() { return getToken(T2Parser.RETORNE, 0); }
 		public ExpressaoContext expressao() {
 			return getRuleContext(ExpressaoContext.class,0);
 		}
@@ -2196,11 +2196,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_cmdRetorne; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterCmdRetorne(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterCmdRetorne(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitCmdRetorne(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitCmdRetorne(this);
 		}
 	}
 
@@ -2241,11 +2241,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_selecao; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterSelecao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterSelecao(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitSelecao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitSelecao(this);
 		}
 	}
 
@@ -2288,7 +2288,7 @@ public class T2ParserParser extends Parser {
 		public ConstantesContext constantes() {
 			return getRuleContext(ConstantesContext.class,0);
 		}
-		public TerminalNode DELIM() { return getToken(T2ParserParser.DELIM, 0); }
+		public TerminalNode DELIM() { return getToken(T2Parser.DELIM, 0); }
 		public List<CmdContext> cmd() {
 			return getRuleContexts(CmdContext.class);
 		}
@@ -2301,11 +2301,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_item_selecao; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterItem_selecao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterItem_selecao(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitItem_selecao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitItem_selecao(this);
 		}
 	}
 
@@ -2355,9 +2355,9 @@ public class T2ParserParser extends Parser {
 		public Numero_intervaloContext numero_intervalo(int i) {
 			return getRuleContext(Numero_intervaloContext.class,i);
 		}
-		public List<TerminalNode> VIRGULA() { return getTokens(T2ParserParser.VIRGULA); }
+		public List<TerminalNode> VIRGULA() { return getTokens(T2Parser.VIRGULA); }
 		public TerminalNode VIRGULA(int i) {
-			return getToken(T2ParserParser.VIRGULA, i);
+			return getToken(T2Parser.VIRGULA, i);
 		}
 		public ConstantesContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2365,11 +2365,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constantes; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterConstantes(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterConstantes(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitConstantes(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitConstantes(this);
 		}
 	}
 
@@ -2413,9 +2413,9 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Numero_intervaloContext extends ParserRuleContext {
-		public List<TerminalNode> NUM_INT() { return getTokens(T2ParserParser.NUM_INT); }
+		public List<TerminalNode> NUM_INT() { return getTokens(T2Parser.NUM_INT); }
 		public TerminalNode NUM_INT(int i) {
-			return getToken(T2ParserParser.NUM_INT, i);
+			return getToken(T2Parser.NUM_INT, i);
 		}
 		public List<Op_unarioContext> op_unario() {
 			return getRuleContexts(Op_unarioContext.class);
@@ -2423,18 +2423,18 @@ public class T2ParserParser extends Parser {
 		public Op_unarioContext op_unario(int i) {
 			return getRuleContext(Op_unarioContext.class,i);
 		}
-		public TerminalNode INTERVALO() { return getToken(T2ParserParser.INTERVALO, 0); }
+		public TerminalNode INTERVALO() { return getToken(T2Parser.INTERVALO, 0); }
 		public Numero_intervaloContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_numero_intervalo; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterNumero_intervalo(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterNumero_intervalo(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitNumero_intervalo(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitNumero_intervalo(this);
 		}
 	}
 
@@ -2494,18 +2494,18 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Op_unarioContext extends ParserRuleContext {
-		public TerminalNode SUBTRACAO() { return getToken(T2ParserParser.SUBTRACAO, 0); }
+		public TerminalNode SUBTRACAO() { return getToken(T2Parser.SUBTRACAO, 0); }
 		public Op_unarioContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_op_unario; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterOp_unario(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterOp_unario(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitOp_unario(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitOp_unario(this);
 		}
 	}
 
@@ -2550,11 +2550,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_exp_aritmetica; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterExp_aritmetica(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterExp_aritmetica(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitExp_aritmetica(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitExp_aritmetica(this);
 		}
 	}
 
@@ -2618,11 +2618,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_termo; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterTermo(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterTermo(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitTermo(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitTermo(this);
 		}
 	}
 
@@ -2684,11 +2684,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_fator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterFator(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterFator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitFator(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitFator(this);
 		}
 	}
 
@@ -2732,19 +2732,19 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Op1Context extends ParserRuleContext {
-		public TerminalNode SOMA() { return getToken(T2ParserParser.SOMA, 0); }
-		public TerminalNode SUBTRACAO() { return getToken(T2ParserParser.SUBTRACAO, 0); }
+		public TerminalNode SOMA() { return getToken(T2Parser.SOMA, 0); }
+		public TerminalNode SUBTRACAO() { return getToken(T2Parser.SUBTRACAO, 0); }
 		public Op1Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_op1; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterOp1(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterOp1(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitOp1(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitOp1(this);
 		}
 	}
 
@@ -2780,19 +2780,19 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Op2Context extends ParserRuleContext {
-		public TerminalNode MULTIPLICACAO() { return getToken(T2ParserParser.MULTIPLICACAO, 0); }
-		public TerminalNode DIVISAO() { return getToken(T2ParserParser.DIVISAO, 0); }
+		public TerminalNode MULTIPLICACAO() { return getToken(T2Parser.MULTIPLICACAO, 0); }
+		public TerminalNode DIVISAO() { return getToken(T2Parser.DIVISAO, 0); }
 		public Op2Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_op2; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterOp2(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterOp2(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitOp2(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitOp2(this);
 		}
 	}
 
@@ -2828,18 +2828,18 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Op3Context extends ParserRuleContext {
-		public TerminalNode MOD() { return getToken(T2ParserParser.MOD, 0); }
+		public TerminalNode MOD() { return getToken(T2Parser.MOD, 0); }
 		public Op3Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_op3; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterOp3(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterOp3(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitOp3(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitOp3(this);
 		}
 	}
 
@@ -2881,11 +2881,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parcela; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterParcela(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterParcela(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitParcela(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitParcela(this);
 		}
 	}
 
@@ -2947,33 +2947,33 @@ public class T2ParserParser extends Parser {
 		public IdentificadorContext identificador() {
 			return getRuleContext(IdentificadorContext.class,0);
 		}
-		public TerminalNode PONTEIRO() { return getToken(T2ParserParser.PONTEIRO, 0); }
-		public TerminalNode IDENT() { return getToken(T2ParserParser.IDENT, 0); }
-		public TerminalNode ABREPAR() { return getToken(T2ParserParser.ABREPAR, 0); }
+		public TerminalNode PONTEIRO() { return getToken(T2Parser.PONTEIRO, 0); }
+		public TerminalNode IDENT() { return getToken(T2Parser.IDENT, 0); }
+		public TerminalNode ABREPAR() { return getToken(T2Parser.ABREPAR, 0); }
 		public List<ExpressaoContext> expressao() {
 			return getRuleContexts(ExpressaoContext.class);
 		}
 		public ExpressaoContext expressao(int i) {
 			return getRuleContext(ExpressaoContext.class,i);
 		}
-		public TerminalNode FECHAPAR() { return getToken(T2ParserParser.FECHAPAR, 0); }
-		public List<TerminalNode> VIRGULA() { return getTokens(T2ParserParser.VIRGULA); }
+		public TerminalNode FECHAPAR() { return getToken(T2Parser.FECHAPAR, 0); }
+		public List<TerminalNode> VIRGULA() { return getTokens(T2Parser.VIRGULA); }
 		public TerminalNode VIRGULA(int i) {
-			return getToken(T2ParserParser.VIRGULA, i);
+			return getToken(T2Parser.VIRGULA, i);
 		}
-		public TerminalNode NUM_INT() { return getToken(T2ParserParser.NUM_INT, 0); }
-		public TerminalNode NUM_REAL() { return getToken(T2ParserParser.NUM_REAL, 0); }
+		public TerminalNode NUM_INT() { return getToken(T2Parser.NUM_INT, 0); }
+		public TerminalNode NUM_REAL() { return getToken(T2Parser.NUM_REAL, 0); }
 		public Parcela_unarioContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_parcela_unario; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterParcela_unario(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterParcela_unario(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitParcela_unario(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitParcela_unario(this);
 		}
 	}
 
@@ -3071,22 +3071,22 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Parcela_nao_unarioContext extends ParserRuleContext {
-		public TerminalNode ENDERECO() { return getToken(T2ParserParser.ENDERECO, 0); }
+		public TerminalNode ENDERECO() { return getToken(T2Parser.ENDERECO, 0); }
 		public IdentificadorContext identificador() {
 			return getRuleContext(IdentificadorContext.class,0);
 		}
-		public TerminalNode CADEIA() { return getToken(T2ParserParser.CADEIA, 0); }
+		public TerminalNode CADEIA() { return getToken(T2Parser.CADEIA, 0); }
 		public Parcela_nao_unarioContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_parcela_nao_unario; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterParcela_nao_unario(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterParcela_nao_unario(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitParcela_nao_unario(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitParcela_nao_unario(this);
 		}
 	}
 
@@ -3145,11 +3145,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_exp_relacional; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterExp_relacional(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterExp_relacional(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitExp_relacional(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitExp_relacional(this);
 		}
 	}
 
@@ -3189,23 +3189,23 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Op_relacionalContext extends ParserRuleContext {
-		public TerminalNode IGUAL() { return getToken(T2ParserParser.IGUAL, 0); }
-		public TerminalNode DIFERENTE() { return getToken(T2ParserParser.DIFERENTE, 0); }
-		public TerminalNode MAIORIGUAL() { return getToken(T2ParserParser.MAIORIGUAL, 0); }
-		public TerminalNode MENORIGUAL() { return getToken(T2ParserParser.MENORIGUAL, 0); }
-		public TerminalNode MAIOR() { return getToken(T2ParserParser.MAIOR, 0); }
-		public TerminalNode MENOR() { return getToken(T2ParserParser.MENOR, 0); }
+		public TerminalNode IGUAL() { return getToken(T2Parser.IGUAL, 0); }
+		public TerminalNode DIFERENTE() { return getToken(T2Parser.DIFERENTE, 0); }
+		public TerminalNode MAIORIGUAL() { return getToken(T2Parser.MAIORIGUAL, 0); }
+		public TerminalNode MENORIGUAL() { return getToken(T2Parser.MENORIGUAL, 0); }
+		public TerminalNode MAIOR() { return getToken(T2Parser.MAIOR, 0); }
+		public TerminalNode MENOR() { return getToken(T2Parser.MENOR, 0); }
 		public Op_relacionalContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_op_relacional; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterOp_relacional(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterOp_relacional(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitOp_relacional(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitOp_relacional(this);
 		}
 	}
 
@@ -3259,11 +3259,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expressao; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterExpressao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterExpressao(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitExpressao(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitExpressao(this);
 		}
 	}
 
@@ -3325,11 +3325,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_termo_logico; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterTermo_logico(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterTermo_logico(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitTermo_logico(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitTermo_logico(this);
 		}
 	}
 
@@ -3376,18 +3376,18 @@ public class T2ParserParser extends Parser {
 		public Parcela_logicaContext parcela_logica() {
 			return getRuleContext(Parcela_logicaContext.class,0);
 		}
-		public TerminalNode NOT() { return getToken(T2ParserParser.NOT, 0); }
+		public TerminalNode NOT() { return getToken(T2Parser.NOT, 0); }
 		public Fator_logicoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_fator_logico; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterFator_logico(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterFator_logico(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitFator_logico(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitFator_logico(this);
 		}
 	}
 
@@ -3425,8 +3425,8 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Parcela_logicaContext extends ParserRuleContext {
-		public TerminalNode TRUE() { return getToken(T2ParserParser.TRUE, 0); }
-		public TerminalNode FALSE() { return getToken(T2ParserParser.FALSE, 0); }
+		public TerminalNode TRUE() { return getToken(T2Parser.TRUE, 0); }
+		public TerminalNode FALSE() { return getToken(T2Parser.FALSE, 0); }
 		public Exp_relacionalContext exp_relacional() {
 			return getRuleContext(Exp_relacionalContext.class,0);
 		}
@@ -3436,11 +3436,11 @@ public class T2ParserParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parcela_logica; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterParcela_logica(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterParcela_logica(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitParcela_logica(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitParcela_logica(this);
 		}
 	}
 
@@ -3499,18 +3499,18 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Op_logico_1Context extends ParserRuleContext {
-		public TerminalNode OR() { return getToken(T2ParserParser.OR, 0); }
+		public TerminalNode OR() { return getToken(T2Parser.OR, 0); }
 		public Op_logico_1Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_op_logico_1; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterOp_logico_1(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterOp_logico_1(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitOp_logico_1(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitOp_logico_1(this);
 		}
 	}
 
@@ -3537,18 +3537,18 @@ public class T2ParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Op_logico_2Context extends ParserRuleContext {
-		public TerminalNode AND() { return getToken(T2ParserParser.AND, 0); }
+		public TerminalNode AND() { return getToken(T2Parser.AND, 0); }
 		public Op_logico_2Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_op_logico_2; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).enterOp_logico_2(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).enterOp_logico_2(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof T2ParserListener ) ((T2ParserListener)listener).exitOp_logico_2(this);
+			if ( listener instanceof T2Listener ) ((T2Listener)listener).exitOp_logico_2(this);
 		}
 	}
 
