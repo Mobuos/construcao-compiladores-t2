@@ -11,3 +11,7 @@ buildNumber.properties
 temp/
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+t2-parser/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+t2-parser/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+t2-parser/target/surefire-reports/br.ufscar.dc.compiladores.t2.parser.AppTest.txt
+t2-parser/target/surefire-reports/TEST-br.ufscar.dc.compiladores.t2.parser.AppTest.xml
