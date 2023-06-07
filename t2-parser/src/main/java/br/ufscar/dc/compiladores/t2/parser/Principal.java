@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.CommonTokenStream;
 // import org.antlr.v4.runtime.Token;
 
@@ -38,26 +39,62 @@ public class Principal {
                 return; // Termina o programa prematuramente
         }
 
-
+        // Análise Léxica
+        // --------------
         CharStream cs = CharStreams.fromFileName(args[0]);
         T2Lexer lexer = new T2Lexer(cs);
+        Boolean erroLexico = false;
+
+        Token t = null;
+        while ((t = lexer.nextToken()).getType() != Token.EOF) {
+            String nomeToken = T2Lexer.VOCABULARY.getDisplayName(t.getType());
+            
+            // Mensagem de erro para qualquer simbolo não identificado. 
+            if(nomeToken.equals("ERRO")) {
+                writer.println("Linha "+t.getLine()+": "+t.getText()+" - simbolo nao identificado");
+                erroLexico = true;
+                break;
+            }
+            // Mensagem de erro customizada para comentários não fechados.
+            else if(nomeToken.equals("COMENT_N_FECHADO")) {
+                writer.println("Linha "+t.getLine()+": comentario nao fechado");
+                erroLexico = true;
+                break;
+            }
+            
+            // Mensagem de erro customizada para strings não fechadas.
+            else if(nomeToken.equals("CADEIA_N_FECHADA")) {
+                writer.println("Linha "+t.getLine()+": cadeia literal nao fechada");
+                erroLexico = true;
+                break;
+            }
+        }
 
         //        // Descomentar para depurar o Léxico
         //        Token t = null;
         //        while( (t = lexer.nextToken()).getType() != Token.EOF) {
         //            System.out.println("<" + AlgumaLexer.VOCABULARY.getDisplayName(t.getType()) + "," + t.getText() + ">");
         //        }
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
-        T2Parser parser = new T2Parser(tokens);
 
-        // Adicionando nosso ErrorListener customizado
-        parser.removeErrorListeners();
-        MyCustomErrorListener mcel = new MyCustomErrorListener(writer);
-        parser.addErrorListener(mcel);
+        // Análise Sintática
+        // -----------------
 
-        parser.programa();
+        if (!erroLexico) {
+            cs = CharStreams.fromFileName(args[0]);
+            lexer = new T2Lexer(cs);
+    
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+            T2Parser parser = new T2Parser(tokens);
+    
+            // Adicionando nosso ErrorListener customizado
+            parser.removeErrorListeners();
+            MyCustomErrorListener mcel = new MyCustomErrorListener(writer);
+            parser.addErrorListener(mcel);
+    
+            parser.programa();
+        }
+        
         writer.println("Fim da compilacao");
-
         writer.close();
     }
 }

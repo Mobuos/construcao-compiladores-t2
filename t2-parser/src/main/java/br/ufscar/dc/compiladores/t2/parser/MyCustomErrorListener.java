@@ -13,6 +13,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 
 public class MyCustomErrorListener implements ANTLRErrorListener {
     PrintWriter pw;
+    Boolean erroSintatico = false;
     public MyCustomErrorListener(PrintWriter pw) {
         this.pw = pw;    
     }
@@ -34,10 +35,17 @@ public class MyCustomErrorListener implements ANTLRErrorListener {
 
     @Override
     public void	syntaxError(Recognizer<?,?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) {
-        // Aqui vamos colocar o tratamento de erro customizado
+        // Reportar apenas o primeiro erro, ignorar os outros
+        if(!erroSintatico){
+            Token t = (Token) offendingSymbol;
 
-        Token t = (Token) offendingSymbol;
-
-        pw.println("Linha "+line+": erro sintatico proximo a "+t.getText());
+            String tokenText = t.getText();
+            if (tokenText == "<EOF>"){
+                tokenText = "EOF";
+            }
+    
+            pw.println("Linha "+line+": erro sintatico proximo a "+ tokenText);
+            erroSintatico = true;
+        }
     }
 }
