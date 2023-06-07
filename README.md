@@ -36,8 +36,9 @@ Para compilar e executar o programa basta executar os comandos a seguir, a parti
 ```
 
 ```
-  java -jar target/t2-parser-1.0-SNAPSHOT-jar-with-dependencies.jar [caminho para o código fonte LA] [caminho para arquivo de saída]
+  java -jar target/t2-parser-1.0-SNAPSHOT-jar-with-dependencies.jar <caminho para o código fonte LA> [caminho para arquivo de saída]
 ```
+Note que para rodar o programa manualmente, talvez seja útil não especificar um arquivo de saída. Nesse caso o comportamento do programa é imprimir na saída padrão do terminal.
 
 ## Rodando testes automáticos
 

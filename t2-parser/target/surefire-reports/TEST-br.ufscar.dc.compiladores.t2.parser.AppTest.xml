@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.ufscar.dc.compiladores.t2.parser.AppTest" time="0.055" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.ufscar.dc.compiladores.t2.parser.AppTest" time="0.049" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-20-openjdk/lib"/>
-    <property name="sun.java.command" value="/mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t2/t2-parser/target/surefire/surefirebooter3840970961225463583.jar /mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t2/t2-parser/target/surefire 2023-06-06T20-28-32_996-jvmRun1 surefire6654873086144979401tmp surefire_011094351809283302103tmp"/>
+    <property name="sun.java.command" value="/mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t2/t2-parser/target/surefire/surefirebooter17230198847314906628.jar /mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t2/t2-parser/target/surefire 2023-06-06T21-20-18_077-jvmRun1 surefire1833541123557435914tmp surefire_07862160929606170103tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t2/t2-parser/target/test-classes:/mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t2/t2-parser/target/classes:/home/dini/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/dini/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/dini/.m2/repository/org/antlr/antlr4/4.11.1/antlr4-4.11.1-complete.jar:/home/dini/.m2/repository/org/antlr/antlr4-runtime/4.11.1/antlr4-runtime-4.11.1.jar:/home/dini/.m2/repository/org/antlr/antlr-runtime/3.5.3/antlr-runtime-3.5.3.jar:/home/dini/.m2/repository/org/antlr/ST4/4.3.4/ST4-4.3.4.jar:/home/dini/.m2/repository/org/abego/treelayout/org.abego.treelayout.core/1.0.3/org.abego.treelayout.core-1.0.3.jar:/home/dini/.m2/repository/org/glassfish/javax.json/1.1.4/javax.json-1.1.4.jar:/home/dini/.m2/repository/com/ibm/icu/icu4j/71.1/icu4j-71.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t2/t2-parser/target/surefire/surefirebooter3840970961225463583.jar"/>
+    <property name="surefire.real.class.path" value="/mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t2/t2-parser/target/surefire/surefirebooter17230198847314906628.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="20.0.1+9"/>
     <property name="user.name" value="dini"/>
