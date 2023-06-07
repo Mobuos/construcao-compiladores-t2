@@ -14,6 +14,7 @@ public class Principal {
     public static void main(String args[]) throws IOException {
         PrintWriter writer = null;
 
+        // Altera a saída do programa de acordo com a quantidade de argumentos
         switch (args.length) {
             case 1:
                 // Opção para entrada de um único argumento de entrada e saída na saída padrão
@@ -37,6 +38,7 @@ public class Principal {
                 return; // Termina o programa prematuramente
         }
 
+
         CharStream cs = CharStreams.fromFileName(args[0]);
         T2Lexer lexer = new T2Lexer(cs);
 
@@ -48,6 +50,7 @@ public class Principal {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         T2Parser parser = new T2Parser(tokens);
 
+        // Adicionando nosso ErrorListener customizado
         parser.removeErrorListeners();
         MyCustomErrorListener mcel = new MyCustomErrorListener(writer);
         parser.addErrorListener(mcel);
