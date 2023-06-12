@@ -70,12 +70,6 @@ public class Principal {
             }
         }
 
-        //        // Descomentar para depurar o Léxico
-        //        Token t = null;
-        //        while( (t = lexer.nextToken()).getType() != Token.EOF) {
-        //            System.out.println("<" + AlgumaLexer.VOCABULARY.getDisplayName(t.getType()) + "," + t.getText() + ">");
-        //        }
-
         // Análise Sintática
         // -----------------
 
