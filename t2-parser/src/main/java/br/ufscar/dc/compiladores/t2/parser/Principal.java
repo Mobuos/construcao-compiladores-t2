@@ -8,7 +8,6 @@ import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.CommonTokenStream;
-// import org.antlr.v4.runtime.Token;
 
 
 public class Principal {
@@ -41,6 +40,7 @@ public class Principal {
 
         // Análise Léxica
         // --------------
+        
         CharStream cs = CharStreams.fromFileName(args[0]);
         T2Lexer lexer = new T2Lexer(cs);
         Boolean erroLexico = false;

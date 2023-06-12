@@ -39,11 +39,13 @@ public class MyCustomErrorListener implements ANTLRErrorListener {
         if(!erroSintatico){
             Token t = (Token) offendingSymbol;
 
+            // Modificação da string "EOF" para conformidade com os casos de testes
             String tokenText = t.getText();
             if (tokenText == "<EOF>"){
                 tokenText = "EOF";
             }
     
+            // Impressão do erro
             pw.println("Linha "+line+": erro sintatico proximo a "+ tokenText);
             erroSintatico = true;
         }

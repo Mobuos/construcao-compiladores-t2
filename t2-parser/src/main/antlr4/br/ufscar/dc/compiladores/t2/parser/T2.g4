@@ -1,5 +1,8 @@
 grammar T2;
 
+// Parte Léxica (T1)
+// -----------------
+
 // Máquina de estados que verifica o comentário corretamente, em que se inicia com o '{' aceita qualquer 
 // caracter dentro deste, sem ter quebra de linha e finaliza com '}'.
 COMENTARIO       : '{' ~('\n')*? '}' {skip();};
@@ -103,6 +106,9 @@ COMENT_N_FECHADO : '{' ~('\n'|'}')*? '\n';
 
 // Caso não for identificado nenhuma regra acima, gera um erro.
 ERRO             : .;
+
+// Parte Sintática (T2)
+// ------------------------------------------------
 
 programa
     : declaracoes 'algoritmo' corpo 'fim_algoritmo'
