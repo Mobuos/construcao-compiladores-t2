@@ -263,8 +263,8 @@ public class T2Parser extends Parser {
 			return getRuleContext(Valor_constanteContext.class,0);
 		}
 		public TerminalNode TIPO() { return getToken(T2Parser.TIPO, 0); }
-		public TipoContext tipo() {
-			return getRuleContext(TipoContext.class,0);
+		public RegistroContext registro() {
+			return getRuleContext(RegistroContext.class,0);
 		}
 		public Declaracao_variaveisContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -315,7 +315,7 @@ public class T2Parser extends Parser {
 				setState(117);
 				match(DELIM);
 				setState(118);
-				tipo();
+				registro();
 				}
 				break;
 			default:
@@ -3088,10 +3088,10 @@ public class T2Parser extends Parser {
 		"\2d\3\3\2\2\2eh\5\6\4\2fh\5\32\16\2ge\3\2\2\2gf\3\2\2\2hk\3\2\2\2ig\3"+
 		"\2\2\2ij\3\2\2\2j\5\3\2\2\2ki\3\2\2\2lm\7\6\2\2mz\5\b\5\2no\7\7\2\2op"+
 		"\7B\2\2pq\7\60\2\2qr\5\16\b\2rs\7.\2\2st\5\22\n\2tz\3\2\2\2uv\7\36\2\2"+
-		"vw\7B\2\2wx\7\60\2\2xz\5\f\7\2yl\3\2\2\2yn\3\2\2\2yu\3\2\2\2z\7\3\2\2"+
-		"\2{\u0080\5\n\6\2|}\7\65\2\2}\177\5\n\6\2~|\3\2\2\2\177\u0082\3\2\2\2"+
-		"\u0080~\3\2\2\2\u0080\u0081\3\2\2\2\u0081\u0083\3\2\2\2\u0082\u0080\3"+
-		"\2\2\2\u0083\u0084\7\60\2\2\u0084\u0085\5\f\7\2\u0085\t\3\2\2\2\u0086"+
+		"vw\7B\2\2wx\7\60\2\2xz\5\24\13\2yl\3\2\2\2yn\3\2\2\2yu\3\2\2\2z\7\3\2"+
+		"\2\2{\u0080\5\n\6\2|}\7\65\2\2}\177\5\n\6\2~|\3\2\2\2\177\u0082\3\2\2"+
+		"\2\u0080~\3\2\2\2\u0080\u0081\3\2\2\2\u0081\u0083\3\2\2\2\u0082\u0080"+
+		"\3\2\2\2\u0083\u0084\7\60\2\2\u0084\u0085\5\f\7\2\u0085\t\3\2\2\2\u0086"+
 		"\u008b\7B\2\2\u0087\u0088\7?\2\2\u0088\u008a\7B\2\2\u0089\u0087\3\2\2"+
 		"\2\u008a\u008d\3\2\2\2\u008b\u0089\3\2\2\2\u008b\u008c\3\2\2\2\u008c\u0094"+
 		"\3\2\2\2\u008d\u008b\3\2\2\2\u008e\u008f\7\63\2\2\u008f\u0090\5> \2\u0090"+
